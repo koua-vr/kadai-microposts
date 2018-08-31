@@ -3,6 +3,7 @@ class UsersController < ApplicationController
     
   def index
     @users = User.all.page(params[:page])
+    @user = current_user
   end
 
   def show
